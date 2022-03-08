@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="rna"
+                fetch="https://github.com/AOSP-bouquet" />
+
+        <remote name="hentaiOS" 
+                fetch="https://github.com/hentaiOS"
+                revision="refs/heads/SaltyIceCream" />
+
+        <remote name="LineageOS"
+                fetch="https://github.com/LineageOS"
+                revision="refs/heads/lineage-19.0" />
+
+        <!-- Remove existing repos -->
+        <remove-project name="platform/bootable/recovery" />
+        <remove-project name="platform/hardware/qcom/wlan" />
+	<remove-project name="platform/hardware/qcom/gps" />
+
+        <!-- From AOSP-bouquet -->
+        <project path="device/xiaomi/bouquet" name="platform_device_xiaomi_bouquet" remote="rna" revision="SnowCone" />
+        <project path="device/xiaomi/bouquet-kernel" name="platform_device_xiaomi_bouquet-kernel" remote="rna" revision="SnowCone" />
+        <project path="device/xiaomi/bouquet-sepolicy" name="platform_device_xiaomi_bouquet-sepolicy" remote="rna" revision="SnowCone" />
+        <project path="vendor/xiaomi" name="platform_vendor_xiaomi" remote="rna" revision="SnowCone" />
+        <project path="hardware/qcom/sdm660/display" name="platform_hardware_qcom_display" remote="rna" revision="SnowCone" />
+        <project path="hardware/qcom/sdm660/audio" name="platform_hardware_qcom_audio" remote="rna" revision="SnowCone" />
+        <project path="hardware/qcom/sdm660/media" name="platform_hardware_qcom_media" remote="rna" revision="SnowCone" />
+        <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="rna" revision="SaltyIceCream-LA.UM.10" />
+
+        <!-- From hentaiOS -->
+        <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="hentaiOS" />
+        <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="hentaiOS" />
+        <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="hentaiOS" />
+        <project path="hardware/qcom-caf/bt" name="platform_hardware_qcom-caf_bt" groups="pdk" remote="hentaiOS" />
+        <project path="hardware/qcom-caf/wlan" name="platform_hardware_qcom-caf_wlan" groups="pdk" remote="hentaiOS" />
+        <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="vendor" remote="hentaiOS" />
+        <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" groups="vendor" remote="hentaiOS" />
+        <project path="vendor/qcom/opensource/interfaces" name="platform_vendor_qcom_opensource_interfaces" groups="vendor" remote="hentaiOS" />
+
+        <!-- Additions from LineageOS -->
+        <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="LineageOS" />
+</manifest>
