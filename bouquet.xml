@@ -11,11 +11,6 @@
                 fetch="https://github.com/LineageOS"
                 revision="refs/heads/lineage-19.0" />
 
-        <!-- Remove existing repos -->
-        <remove-project name="platform/bootable/recovery" />
-        <remove-project name="platform/hardware/qcom/wlan" />
-	<remove-project name="platform/hardware/qcom/gps" />
-
         <!-- From AOSP-bouquet -->
         <project path="device/xiaomi/bouquet" name="platform_device_xiaomi_bouquet" remote="rna" revision="SnowCone" />
         <project path="device/xiaomi/bouquet-kernel" name="platform_device_xiaomi_bouquet-kernel" remote="rna" revision="SnowCone" />
@@ -27,8 +22,6 @@
         <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="rna" revision="SaltyIceCream-LA.UM.10" />
 
         <!-- From hentaiOS -->
-        <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="hentaiOS" />
-        <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="hentaiOS" />
         <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="hentaiOS" />
         <project path="hardware/qcom-caf/bt" name="platform_hardware_qcom-caf_bt" groups="pdk" remote="hentaiOS" />
         <project path="hardware/qcom-caf/wlan" name="platform_hardware_qcom-caf_wlan" groups="pdk" remote="hentaiOS" />
